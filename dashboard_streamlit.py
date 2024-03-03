@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-with pd.option_context('mode.use_inf_as_null', True):
+
     st.title('Proyek Analisis Data: Peminjaman Sepeda🚲')
     st.subheader('About Peminjaman Sepeda: ')
 
