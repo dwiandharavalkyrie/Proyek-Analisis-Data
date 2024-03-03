@@ -48,9 +48,9 @@ with pd.option_context('mode.use_inf_as_null', True):
         data=bikeday_df,
          palette="viridis"  
      )
-        for p in ax.patches:
-            ax.annotate(f'{int(p.get_height())}', (p.get_x() + p.get_width() / 2., p.get_height()),
-                 ha='center', va='center', xytext=(0, 10), textcoords='offset points', fontsize=10)
+    for p in ax.patches:
+        ax.annotate(f'{int(p.get_height())}', (p.get_x() + p.get_width() / 2., p.get_height()),
+                ha='center', va='center', xytext=(0, 10), textcoords='offset points', fontsize=10)
 
 # Menambahkan elemen desain dan integritas
     plt.title("Number of Bike Rentals by Weather", loc="center", fontsize=15)
