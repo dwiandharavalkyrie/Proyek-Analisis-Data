@@ -15,9 +15,8 @@ st.subheader('Bagaimana tren peminjaman sepeda berubah selama musim berbeda?')
 bikeday_df = pd.read_csv("day.csv")
 bikeday_df = bikeday_df[['season', 'dteday', 'cnt']].reset_index(drop=True)
 season_mapping = {1: 'Spring', 2: 'Summer', 3: 'Fall', 4: 'Winter'}
-bikeday_df['season'] = bikeday_df['season'].map(season_mapping)with pd.option_context('mode.use_inf_as_null', True):
-    trend_by_season = bikeday_df.groupby('season')['cnt'].sum().reset_index()
-
+bikeday_df['season'] = bikeday_df['season'].map(season_mapping)
+trend_by_season = bikeday_df.groupby('season')['cnt'].sum().reset_index()
 fig, ax = plt.subplots(figsize=(10, 6))
 sns.lineplot(x='season', y='cnt', data=trend_by_season, marker='o', color='skyblue', label='Total Peminjaman')
 ax.set_title('Tren Peminjaman Sepeda Berdasarkan Musim', fontsize=16, fontweight='bold')
@@ -59,7 +58,7 @@ plt.ylabel("Number of Bike Rentals")
 st.pyplot(fig)
 st.write('Pada visualisasi data menunjukkan bahwa peminjaman sepeda tertinggi terdapat pada cuaca cerah (clear weather) yang dimana ini mungkin terjadi disebabkan karena pada cuaca cerah dimana mood orang-orang meningkat untuk mengendarai sepeda. Berbeda dengan cuaca hujan lebat (heavy rain) dimana tidak ada terjadinya peminjaman sepeda. Tentu saja tidak ada orang yang berminat untuk mengendarai sepeda dicuaca hujan yang lebat')
 
-#pertanyaan 3
+#pertanyaan 2
 st.subheader('Bagaimana tren peminjaman sepeda pada akhir pekan dibandingkan dengan hari kerja?')
 bikeday_df = pd.read_csv("day.csv")
 selected_attributes = ['weekday', 'workingday', 'cnt']
