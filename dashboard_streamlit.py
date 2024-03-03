@@ -59,4 +59,4 @@ with pd.option_context('mode.use_inf_as_null', True):
     plt.xlabel("Weather")
     plt.ylabel("Number of Bike Rentals")
     st.pyplot(fig)
-   st.write("""Pada visualisasi data menunjukkan bahwa peminjaman sepeda tertinggi terdapat pada cuaca cerah (clear weather) yang dimana ini mungkin terjadi disebabkan karena pada cuaca cerah dimana mood orang-orang meningkat untuk mengendarai sepeda. Berbeda dengan cuaca hujan lebat (heavy rain) dimana tidak ada terjadinya peminjaman sepeda. Tentu saja tidak ada orang yang berminat untuk mengendarai sepeda dicuaca hujan yang lebat""")
+    st.write("""Pada visualisasi data menunjukkan bahwa peminjaman sepeda tertinggi terdapat pada cuaca cerah (clear weather) yang dimana ini mungkin terjadi disebabkan karena pada cuaca cerah dimana mood orang-orang meningkat untuk mengendarai sepeda. Berbeda dengan cuaca hujan lebat (heavy rain) dimana tidak ada terjadinya peminjaman sepeda. Tentu saja tidak ada orang yang berminat untuk mengendarai sepeda dicuaca hujan yang lebat""")
